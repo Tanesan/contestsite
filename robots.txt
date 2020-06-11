@@ -1,0 +1,7 @@
+User-agent: *
+
+Allow: /rule.html
+Allow: /index.htm
+Allow: /program.html
+Allow: /postponed.html
+Sitemap:https://mathcompetition2020.com/sitemap.xml
