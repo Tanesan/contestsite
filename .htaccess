@@ -1,0 +1,97 @@
+<Files ~ "^\.(htaccess)$">
+        deny from all
+</Files>
+<IfModule mod_setenvif.c>
+  SetEnvIf Request_URI "\.(jpe?g|png)$" _image_request
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_ACCEPT} image/webp
+  RewriteCond %{SCRIPT_FILENAME}.webp -f
+  RewriteRule .(jpe?g|png)$ %{SCRIPT_FILENAME}.webp [T=image/webp]
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header append Vary Accept env=_image_request
+</IfModule>
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+</IfModule>
+Options -Indexes
+IndexIgnore *
+RewriteEngine On
+RewriteCond %{HTTP:Accept-Encoding} gzip
+RewriteCond %{REQUEST_FILENAME} !\.gz$
+RewriteCond %{REQUEST_FILENAME}\.gz -s
+RewriteCond %{REQUEST_FILENAME} (\.js|\.css|\.html)$
+RewriteRule .+ %{REQUEST_URI}.gz [L]
+     
+<FilesMatch "\.js\.gz$">
+  ForceType application/x-javascript
+  AddEncoding x-gzip .gz  
+</FilesMatch>
+ 
+<FilesMatch "\.css\.gz$">
+  ForceType text/css
+  AddEncoding x-gzip .gz
+</FilesMatch>
+ 
+<FilesMatch "\.html\.gz$">
+  ForceType text/html
+  AddEncoding x-gzip .gz
+</FilesMatch>
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE image/svg+xml
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+AddOutputFilterByType DEFLATE application/x-font-ttf
+AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+AddOutputFilterByType DEFLATE font/opentype font/ttf font/eot font/otf
+</IfModule>
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteCond %{REQUEST_FILENAME}/ !-d
+  RewriteCond %{REQUEST_FILENAME}\.html -f
+  RewriteRule ^(.*)$ $1.html
+  RewriteCond %{HTTP_HOST} ^www.mathcompetition2020\.com
+  RewriteRule ^(.*)$ https://mathcompetition2020.com/$1 [L,R=301]
+  RewriteCond %{DOCUMENT_ROOT}/$1.min.$2 -f
+  RewriteRule ^([^.]+)\.(css|js)$ $1.min.$2 [L,NC]
+</IfModule>
+Redirect permanent /privacy-policy https://mathcompetition2020.com/
+Redirect permanent /portfolio/ https://mathcompetition2020.com/
+Redirect permanent /rule/ https://mathcompetition2020.com/rule
+Redirect permanent /program/ https://mathcompetition2020.com/program
+Redirect permanent /postponed/ https://mathcompetition2020.com/postponed
+Redirect permanent /2020/01/19/大会のルール、詳細について/ https://mathcompetition2020.com/rule
+Redirect permanent /wp-content/uploads/2020/02/youkou.pdf https://mathcompetition2020.com/uploads/2020/02/youkou.pdf
+Redirect permanent /2020/01/大会のルール、詳細について/ https://mathcompetition2020.com/rule
+Redirect permanent /2020/02/22/postponed/ https://mathcompetition2020.com/postponed
+Redirect permanent https://mathcompetition2020.com https://mathcompetition2020.com/
+Redirect permanent https://mathcompetition2020.com/entry/ https://mathcompetition2020.com/rule
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 3 months"
+  ExpiresByType text/css "access plus 3 weeks"
+  ExpiresByType application/javascript "access plus 1 week"
+  ExpiresByType text/javascript "access plus 1 week"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/svg "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType text/html "access plus 3 weeks"
+  ExpiresByType application/x-javascript "access plus 2 month"
+  ExpiresByType image/x-icon "access plus 1 year"
+</IfModule>
+Redirect permanent /tag/人の最大の力を競う数学の大会/ https://mathcompetition2020.com/
