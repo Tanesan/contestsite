@@ -7485,10 +7485,33 @@
             text-shadow: 0 0 3px #000000, 0 0 3px #000000, 0 0 3px #000000;
             color: white; */
         }
+        /* mjx-container mjx-utext { font-family: Meiryo !important; }
+mjx-container svg text { font-family: Meiryo !important; }
+mjx-container[display="true"] { margin: 0 !important; padding: 2px 0 4px 0 !important; }
+mjx-mid mjx-c::before { padding-top: 0.13em !important; } */
     </style>
     <!--
 <link rel="stylesheet" id="onepress-plus-style-css" href="css/style.css" media="all" > -->
     <title>人の最大の力を競う数学の大会〜プログラミング使用可能の算数・数学コンテスト〜</title>
+    <script>
+        MathJax = {
+          tex: {
+            inlineMath: [
+              ['$', '$'],
+              ['\\(', '\\)']
+            ],
+            displayMath: [
+              ['$$', '$$'],
+              ['\\[', '\\]']
+            ]
+          },
+          options: {
+            skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+          }
+        };
+        </script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" ></script>
 </head>
 
 <body
@@ -7676,6 +7699,22 @@
             <div class="section-content-area custom-section-content"></div>
         </div>
     </section> -->
+    <section class="section-syouhin onepage-section section-meta1 section-padding" id="sample_question"
+            style="padding-bottom: 0vw;">
+            <div class="container">
+                <div class="section-title-area">
+                    <h1 class="section-subtitle">Sample Question</h1>
+                    <h1 class="section-title">例題</h1>
+                   
+                    <div class="section-desc">
+                        当日は問題が4題程度出題される予定です。<br />
+                        こちらの問題が当日出題されることはありません。<br />
+                    <a href="pdf/example.pdf">例題リンク</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="section-syouhin onepage-section section-meta1 section-padding" id="syouhin"
             style="padding-bottom: 25vw;">
             <div class="container">
