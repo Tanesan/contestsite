@@ -2,7 +2,7 @@
   "name": "contestsite",
   "version": "1.0.0",
   "scripts": {
-    "format": "prettier --write \"**/*.{js,json,css,htm}\""
+    "format": "prettier --write \"**/*.{js,json,css,htm,html}\""
   },
   "dependencies": {
     "prettier": "^2.8.4"
