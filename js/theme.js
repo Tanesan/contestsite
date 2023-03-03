@@ -311,6 +311,7 @@ jQuery(document).ready(function($) {
 	 */
 	$document.on("click", "#nav-toggle", function(event) {
 		event.preventDefault();
+		jQuery("#site-navigation").toggle();
 		jQuery("#nav-toggle").toggleClass("nav-is-visible");
 		jQuery(".header-widget").toggleClass("header-widget-mobile");
 		main_navigation.stop();

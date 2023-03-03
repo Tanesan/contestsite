@@ -4043,9 +4043,14 @@
             margin-left: 15px
         }
 
+        .main-navigation {
+            position: static;
+        }
+
         @media screen and (max-width: 1140px) {
             .main-navigation {
-                position: static
+                position: static;
+                display: none;
             }
 
             .main-navigation .onepress-menu {
@@ -7555,8 +7560,8 @@
             <div class="followWrap" style="height: 89px;">
                 <header class="site-header header-contained is-sticky no-t h-on-top header-fixed" id="masthead"
                     style="top: 0px;">
-                    <div class="container">
-                        <div class="site-branding">
+                    <div class="container d-flex justify-content-between">
+                        <div class="site-branding flex-shrink-0">
                             <div class="site-brand-inner has-logo-img has-desc">
                                 <div class="site-logo-div"><a class="custom-logo-link  no-t-logo" href="index.htm"
                                         rel="home"><img alt="プログラミング使用可能の算数・数学コンテスト｜人の最大の力を競う数学の大会" class="custom-logo"
@@ -7565,39 +7570,35 @@
                                 <p class="site-description">人の最大の力を競う数学の大会</p>
                             </div>
                         </div>
-                        <div class="header-right-wrapper">
-                            <a href="/#0" id="nav-toggle">メニュー<span></span></a>
-                            <nav class="main-navigation" id="site-navigation">
-                                <ul class="onepress-menu">
-                                    <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home current-menu-ancestor current-menu-parent menu-item-has-children menu-item-342"
-                                        id="menu-item-342">
-                                        <div class="nav-toggle-subarrow"><i class="fa fa-angle-down"></i></div>
-                                        <a aria-current="page" href="https://mathcompetition2020.com#rule">概要</a>
+                        <div class="d-flex">
+                            <div class="d-flex align-items-center justify-content-centermx-auto flex-shrink-0">
+                                <a class="btn btn-theme-primary btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSdSjUuhkVnZGXulZ3R9rk4Rd0frSR8FNsdJFACRZ-D3vkC0yQ/viewform?usp=sf_link" rel="noopener" target="_blank">エントリー</a>
+                            </div>
+                            <div class="header-right-wrapper d-flex align-items-center justify-content-centermx-auto ml-2">
+                                <a href="/#0" id="nav-toggle">メニュー<span></span></a>
+                                <nav class="main-navigation" id="site-navigation">
+                                    <ul class="onepress-menu">
+                                        <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home current-menu-ancestor current-menu-parent menu-item-has-children menu-item-342"
+                                            id="menu-item-342">
+                                            <div class="nav-toggle-subarrow"><i class="fa fa-angle-down"></i></div>
+                                            <a aria-current="page" href="#rule">概要</a>
 
-                                    </li>
-                                    <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-652"
-                                        id="menu-item-652">
-                                        <a aria-current="page" href="#syouhin">賞品</a>
-                                    </li>
-                                    <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-32"
-                                        id="menu-item-32">
-                                        <a aria-current="page" href="#sid1580376509061">大会本部</a>
-                                    </li>
-                                    <!--                                    <li id="menu-item-31"-->
-                                    <!--                                        class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-31">-->
-                                    <!--                                        <a href="#testimonials" aria-current="page">推薦文</a>-->
-                                    <!--                                    </li>-->
-                                    <!--                                    <li id="menu-item-180"-->
-                                    <!--                                        class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-180">-->
-                                    <!--                                        <a href="#about" aria-current="page">私たちについて</a>-->
-                                    <!--                                    </li>-->
-                                    <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-33"
-                                        id="menu-item-33">
-                                        <a aria-current="page" href="#contact">お問い合わせ</a>
-                                    </li>
-                                </ul>
-                            </nav>
-
+                                        </li>
+                                        <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-652"
+                                            id="menu-item-652">
+                                            <a aria-current="page" href="#syouhin">賞品</a>
+                                        </li>
+                                        <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-32"
+                                            id="menu-item-32">
+                                            <a aria-current="page" href="#sid1580376509061">大会本部</a>
+                                        </li>
+                                        <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-33"
+                                            id="menu-item-33">
+                                            <a aria-current="page" href="#contact">お問い合わせ</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
                         </div>
                     </div>
                 </header>
@@ -8329,6 +8330,7 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=GUA-149383918-2"></script>
     <script src="js/jquery.js"></script>
     <script src="js/theme.js">  </script>
+    <script src="js/index.js" defer></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
