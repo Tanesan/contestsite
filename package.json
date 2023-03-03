@@ -1,0 +1,10 @@
+{
+  "name": "contestsite",
+  "version": "1.0.0",
+  "scripts": {
+    "format": "prettier --write \"**/*.{js,json,css,htm}\""
+  },
+  "dependencies": {
+    "prettier": "^2.8.4"
+  }
+}
