@@ -20,3 +20,4 @@ jobs:
           script: |
             cd ${{ secrets.SERVER_DEPLOY_DIR }}
             git pull origin master
+            rm -rf .github .idea .prettierrc .prettierignore package-lock.json package.json
