@@ -1,13 +1,28 @@
 var isMobile = {
-  Android : function() { return navigator.userAgent.match(/Android/i); },
-  BlackBerry : function() { return navigator.userAgent.match(/BlackBerry/i); },
-  iOS : function() { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
-  Opera : function() { return navigator.userAgent.match(/Opera Mini/i); },
-  Windows : function() { return navigator.userAgent.match(/IEMobile/i); },
-  any : function() {
-    return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() ||
-            isMobile.Opera() || isMobile.Windows());
-  }
+  Android: function () {
+    return navigator.userAgent.match(/Android/i);
+  },
+  BlackBerry: function () {
+    return navigator.userAgent.match(/BlackBerry/i);
+  },
+  iOS: function () {
+    return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+  },
+  Opera: function () {
+    return navigator.userAgent.match(/Opera Mini/i);
+  },
+  Windows: function () {
+    return navigator.userAgent.match(/IEMobile/i);
+  },
+  any: function () {
+    return (
+      isMobile.Android() ||
+      isMobile.BlackBerry() ||
+      isMobile.iOS() ||
+      isMobile.Opera() ||
+      isMobile.Windows()
+    );
+  },
 };
 
 // function preload_images(images, complete_callback) {
@@ -139,11 +154,11 @@ var isMobile = {
 /**
  * Sticky header when scroll.
  */
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
   var $window = $(window);
   var $document = $(document);
 
-  var getAdminBarHeight = function() {
+  var getAdminBarHeight = function () {
     var h = 0;
     if ($("#wpadminbar").length) {
       if ($("#wpadminbar").css("position") == "fixed") {
@@ -153,17 +168,17 @@ jQuery(document).ready(function($) {
     return h;
   };
 
-  var stickyHeaders = (function() {
+  var stickyHeaders = (function () {
     var $stickies;
     var lastScrollTop = 0;
 
-    var setData = function(stickies, addWrap) {
+    var setData = function (stickies, addWrap) {
       var top = 0;
 
       if (typeof addWrap === "undefined") {
         addWrap = true;
       }
-      $stickies = stickies.each(function() {
+      $stickies = stickies.each(function () {
         var $thisSticky = $(this);
         var p = $thisSticky.parent();
         if (!p.hasClass("followWrap")) {
@@ -176,22 +191,28 @@ jQuery(document).ready(function($) {
       });
     };
 
-    var load = function(stickies) {
-      if (typeof stickies === "object" && stickies instanceof jQuery &&
-          stickies.length > 0) {
+    var load = function (stickies) {
+      if (
+        typeof stickies === "object" &&
+        stickies instanceof jQuery &&
+        stickies.length > 0
+      ) {
         setData(stickies);
-        $window.scroll(function() { _whenScrolling(); });
-
-        $window.resize(function() {
-          setData(stickies, false);
-          stickies.each(
-              function() { $(this).removeClass("fixed").removeAttr("style"); });
+        $window.scroll(function () {
           _whenScrolling();
         });
 
-        $document.on("hero_ready", function() {
+        $window.resize(function () {
+          setData(stickies, false);
+          stickies.each(function () {
+            $(this).removeClass("fixed").removeAttr("style");
+          });
+          _whenScrolling();
+        });
+
+        $document.on("hero_ready", function () {
           $(".followWrap").removeAttr("style");
-          setTimeout(function() {
+          setTimeout(function () {
             $(".followWrap").removeAttr("style");
             setData(stickies, false);
             _whenScrolling();
@@ -200,15 +221,15 @@ jQuery(document).ready(function($) {
       }
     };
 
-    var _whenScrolling = function() {
+    var _whenScrolling = function () {
       var top = 0;
       top = getAdminBarHeight();
 
       var scrollTop = $window.scrollTop();
 
-      $stickies.each(function(i) {
+      $stickies.each(function (i) {
         var $thisSticky = $(this),
-            $stickyPosition = $thisSticky.parent().offset().top;
+          $stickyPosition = $thisSticky.parent().offset().top;
         if (scrollTop === 0) {
           $thisSticky.addClass("no-scroll");
         }
@@ -219,19 +240,21 @@ jQuery(document).ready(function($) {
           $thisSticky.addClass("header-fixed");
           $thisSticky.css("top", top);
         } else {
-          $thisSticky.removeClass("header-fixed")
-              .removeAttr("style")
-              .addClass("no-scroll");
+          $thisSticky
+            .removeClass("header-fixed")
+            .removeAttr("style")
+            .addClass("no-scroll");
         }
       });
     };
 
-    return {load : load};
+    return { load: load };
   })();
   stickyHeaders.load($("#masthead.is-sticky"));
   // When Header Panel rendered by customizer
-  $document.on("header_view_changed",
-               function() { stickyHeaders.load($("#masthead.is-sticky")); });
+  $document.on("header_view_changed", function () {
+    stickyHeaders.load($("#masthead.is-sticky"));
+  });
 
   // 	/*
   // 	 * Nav Menu & element actions
@@ -246,10 +269,10 @@ jQuery(document).ready(function($) {
     var noSticky = header.classList.contains("no-sticky");
   }
 
-  var setNavTop = function() {
+  var setNavTop = function () {
     var offset = header.getBoundingClientRect();
     var top = offset.x + offset.height - 1;
-    main_navigation.css({top : top});
+    main_navigation.css({ top: top });
   };
 
   /**
@@ -257,7 +280,7 @@ jQuery(document).ready(function($) {
    *
    * @return number
    */
-  var getNavHeight = function(fitWindow) {
+  var getNavHeight = function (fitWindow) {
     if (typeof fitWindow === "undefined") {
       fitWindow = true;
     }
@@ -279,7 +302,7 @@ jQuery(document).ready(function($) {
    * @since 0.0.1
    * @since 2.2.1
    */
-  $document.on("click", "#nav-toggle", function(event) {
+  $document.on("click", "#nav-toggle", function (event) {
     event.preventDefault();
     jQuery("#site-navigation").toggle();
     jQuery("#nav-toggle").toggleClass("nav-is-visible");
@@ -291,23 +314,24 @@ jQuery(document).ready(function($) {
       $("body").addClass("onepress-menu-mobile-opening");
       setNavTop();
       var h = getNavHeight(!noSticky);
-      if (isNaN(h)) { // when IE 11 & Edge return h is NaN.
+      if (isNaN(h)) {
+        // when IE 11 & Edge return h is NaN.
         h = $(window).height();
       }
-      main_navigation.animate({height : h}, 300, function() {
+      main_navigation.animate({ height: h }, 300, function () {
         // Animation complete.
         if (noSticky) {
-          main_navigation.css({"min-height" : h, height : "auto"});
+          main_navigation.css({ "min-height": h, height: "auto" });
         }
       });
     } else {
       main_navigation.css({
-        height : main_navigation.height(),
-        'min-height' : 0,
-        overflow : 'hidden'
+        height: main_navigation.height(),
+        "min-height": 0,
+        overflow: "hidden",
       });
-      setTimeout(function() {
-        main_navigation.animate({height : 0}, 300, function() {
+      setTimeout(function () {
+        main_navigation.animate({ height: 0 }, 300, function () {
           main_navigation.removeAttr("style");
           main_navigation.removeClass("onepress-menu-mobile");
           $("body").removeClass("onepress-menu-mobile-opening");
@@ -322,14 +346,16 @@ jQuery(document).ready(function($) {
    * @since 2.2.1
    */
   if (!noSticky && isMobile.any()) {
-    $(document).on("scroll", function() {
+    $(document).on("scroll", function () {
       if (main_navigation.hasClass("onepress-menu-mobile")) {
-        var newViewportHeight = Math.max(document.documentElement.clientHeight,
-                                         window.innerHeight || 0);
+        var newViewportHeight = Math.max(
+          document.documentElement.clientHeight,
+          window.innerHeight || 0
+        );
         var offset = header.getBoundingClientRect();
         var top = offset.x + offset.height - 1;
         var h = newViewportHeight - top + 1;
-        main_navigation.css({height : h, top : top});
+        main_navigation.css({ height: h, top: top });
       }
     });
   }
