@@ -2,7 +2,6 @@
 <html lang="ja" prefix="og: https://ogp.me/ns#">
 
 <head>
-    <meta content="noindex" name="robots">
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta
@@ -7485,33 +7484,70 @@
             text-shadow: 0 0 3px #000000, 0 0 3px #000000, 0 0 3px #000000;
             color: white; */
         }
-        /* mjx-container mjx-utext { font-family: Meiryo !important; }
-mjx-container svg text { font-family: Meiryo !important; }
-mjx-container[display="true"] { margin: 0 !important; padding: 2px 0 4px 0 !important; }
-mjx-mid mjx-c::before { padding-top: 0.13em !important; } */
+
+        .award_title {
+            font-size: 12px !important;
+            padding-right: 10px;
+        }
+
+        .award_content {
+            text-align: left;
+            font-size: 16px !important;
+            margin-top: 60px;
+            position: absolute;
+            top: 5px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .award_section {
+            padding-bottom: 231vw;
+        }
+
+        @media screen and (min-width: 740px) {
+            .award_title {
+                font-size: 18px !important;
+                padding-top: 0px !important;
+            }
+
+            .award_content {
+                font-size: 32px !important;
+            }
+
+            .award_section {
+                padding-bottom: 100vw !important;
+            }
+
+            .award_frame{
+                margin-top: -16px;
+            }
+
+        }
     </style>
     <!--
 <link rel="stylesheet" id="onepress-plus-style-css" href="css/style.css" media="all" > -->
     <title>人の最大の力を競う数学の大会〜プログラミング使用可能の算数・数学コンテスト〜</title>
     <script>
         MathJax = {
-          tex: {
-            inlineMath: [
-              ['$', '$'],
-              ['\\(', '\\)']
-            ],
-            displayMath: [
-              ['$$', '$$'],
-              ['\\[', '\\]']
-            ]
-          },
-          options: {
-            skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
-          }
+            tex: {
+                inlineMath: [
+                    ['$', '$'],
+                    ['\\(', '\\)']
+                ],
+                displayMath: [
+                    ['$$', '$$'],
+                    ['\\[', '\\]']
+                ]
+            },
+            options: {
+                skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"]
+            }
         };
-        </script>
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" ></script>
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
 
 <body
@@ -7586,7 +7622,8 @@ mjx-mid mjx-c::before { padding-top: 0.13em !important; } */
                                 <strong>M</strong>ath
                                 <strong>C</strong>ompetition <strong>2023</strong>
                             </p>
-                            <a class="btn btn-theme-primary btn-lg" href="https://docs.google.com/forms/d/e/1FAIpQLSdSjUuhkVnZGXulZ3R9rk4Rd0frSR8FNsdJFACRZ-D3vkC0yQ/viewform?usp=sf_link"
+                            <a class="btn btn-theme-primary btn-lg"
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSdSjUuhkVnZGXulZ3R9rk4Rd0frSR8FNsdJFACRZ-D3vkC0yQ/viewform?usp=sf_link"
                                 rel="noopener" target="_blank">エントリー</a> <a class="btn btn-secondary-outline btn-lg"
                                 href="/#contact">お問い合わせ</a>
                         </div>
@@ -7658,7 +7695,7 @@ mjx-mid mjx-c::before { padding-top: 0.13em !important; } */
                     <h1 class="section-title">日時</h1>
                 </div>
                 <div class="text-center mt-5 section-content-area custom-section-content">
-                    <h3>オンライン大会　３/１１(土）Zoom / Webex　を使用予定</h3>
+                    <h3>オンライン大会　３/１１(土）Zoom / Google Meet　を使用予定</h3>
                     <p><a href="program.html">タイムスケジュール</a><br>
                         <a href="rule.html">ルール</a>
                     </p>
@@ -7676,7 +7713,7 @@ mjx-mid mjx-c::before { padding-top: 0.13em !important; } */
                         </p>
                         <p>エントリーのキャンセル及び人数の追加も可能です。<br>
                             webサイト下部のお問い合わせフォームまたはSNSのDMまでお願いします。</p>
-                        <pre>締め切り：2023年3月5日0:00まで</pre>
+                        <pre>締め切り：2023年3月8日0:00まで</pre>
                         <p><a data-mce-href="https://docs.google.com/forms/d/e/1FAIpQLSdSjUuhkVnZGXulZ3R9rk4Rd0frSR8FNsdJFACRZ-D3vkC0yQ/viewform?usp=sf_link"
                                 href="https://docs.google.com/forms/d/e/1FAIpQLSdSjUuhkVnZGXulZ3R9rk4Rd0frSR8FNsdJFACRZ-D3vkC0yQ/viewform?usp=sf_link">「人の最大の力を競う数学の大会エントリーサイト」</a>
                         </p>
@@ -7685,117 +7722,146 @@ mjx-mid mjx-c::before { padding-top: 0.13em !important; } */
                 <div class="section-content-area custom-section-content"></div>
             </div>
         </section>
-        <!-- <section id="number" class="section-number onepage-section section-meta section-padding">
-        <div class="container">
-            <div class="section-title-area">
-                <h1 class="section-title">エントリー人数</h1>
-                <div class="section-desc">
-                    <p>人の最大の力を競う数学の大会　関東大会</p>
-                    <p>現在63名 (エントリー数　44)</p>
-                    <p>人の最大の力を競う数学の大会　関西大会</p>
-                    <p>現在44名(エントリー数　32)</p>
-                </div>
-            </div>
-            <div class="section-content-area custom-section-content"></div>
-        </div>
-    </section> -->
-    <section class="section-syouhin onepage-section section-meta1 section-padding" id="sample_question"
+        <section class="section-syouhin onepage-section section-meta1 section-padding" id="sample_question"
             style="padding-bottom: 0vw;">
             <div class="container">
                 <div class="section-title-area">
                     <h1 class="section-subtitle">Sample Question</h1>
                     <h1 class="section-title">例題</h1>
-                   
+
                     <div class="section-desc">
                         当日は問題が4題程度出題される予定です。<br />
                         こちらの問題が当日出題されることはありません。<br />
-                    <a target="_blank" href="pdf/example.pdf">例題リンク</a>
+                        <a target="_blank" href="pdf/example.pdf">例題リンク</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section-syouhin onepage-section section-meta1 section-padding" id="syouhin"
-            style="padding-bottom: 25vw;">
+        <section class="section-syouhin onepage-section section-meta1 section-padding award_section" id="syouhin">
             <div class="container">
                 <div class="section-title-area">
                     <h1 class="section-subtitle">award</h1>
                     <h1 class="section-title">各賞</h1>
-                    賞品の詳細は後日発表します。
+                    <table style="font-weight: bold;">
+                        <tbody>
+                            <tr>
+                                <td rowspan="2">Wolfram 賞</td>
+                                <td>短大以下の教員、もしくは学生の場合</td>
+                                <td>Mathematica あるいはWolfram Alpha ProあるいはWolfram Alpha Notebook
+                                    Edition のcomplimentary license 1年分</td>
+                            </tr>
+                            <tr>
+                                <td>上記以外の方の場合</td>
+                                <td>Wolfram Alpha ProあるいはWolfram Alpha Notebook Editionのcomplimentary
+                                    license 1年分</td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <div class="row">
                         <div class="col-12">
                             <div class="prize">
-                                <div class="surface prize-box"
-                                    style="text-align: left;font-size:32px;margin-top:18px;position:absolute;top:5px;background-color:white;display:flex;justify-content: center;">
-                                    <img alt="trophy" class="mr-5" src="img/trophy.png" style="width:89px;" />
-                                    <div style="margin-top: -16px;">
-                                        <span style="font-size:18px; padding-right: 10px">最優秀賞<br
-                                                style="line-height: 4px;"></span>表彰状 + α
+                                <div class="surface prize-box award_content">
+                                    <img alt="trophy" class="mr-4" src="img/trophy1.png" />
+                                    <div class="award_frame">
+                                        <span class="award_title">最優秀賞<br style="line-height: 4px;"></span>Amazonギフト券
+                                        2万円 + Wolfram 賞
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="section-desc">
-                        <!-- <p style="text-align: left" data-mce-style="text-align: left;">
-                        当コンテスト上位優秀者の方には表彰状とは別に以下副賞が贈呈されます。</p>
-                    <p style="text-align: left" data-mce-style="text-align: left;">
-                        関東大会（上位2チームまで）・関西大会（上位3チームまで）（変更の可能性あり）</p> -->
-                        <!-- <p style="text-align: left" data-mce-style="text-align: left;">
-                        短大以下の教員または学生の場合はMathematica
-                        のcomplimentary license 1年分も選択可能です。</p> -->
-                    </div>
-                </div>
-                <div class="section-content-area custom-section-content"></div>
-            </div>
-        </section>
-
-        <section class="section-padding section-clients onepage-section" id="cloudfunding">
-            <div class="container">
-                <div class="section-title-area">
-                    <h1 class="section-subtitle">sponsor</h1>
-                    <h1 class="section-title">協賛</h1>
-                </div>
-                <div class="clients-wrapper slideInUp client-5-cols">
-                    <!-- <div class="client-col">
-                        <a href="https://www.wolfram.com/?source=nav" rel="noopener" target="_blank"> <img
-                                alt="Wolfram Research" src="img/wolfram.png">
-                        </a>
-                    </div> -->
-                    <div class="client-col">
-                        <a href="https://www.goga-analysis.co.jp/" rel="noopener" target="_blank"> <img
-                                alt="株式会社ゴーガ解析コンサルティング" src="img/goga21.png">
-                        </a>
-                    </div>
-                    <div class="client-col">
-                        <a href="https://x-mov.jp/" rel="noopener" target="_blank"> <img alt="X-movJapan株式会社"
-                                src="img/XmovJapan.png">
-                        </a>
-                    </div>
-                    <div class="client-col">
-                        <a href="https://www.sirocco.jp/" rel="noopener" target="_blank"> <img alt="チームシロッコ合同会社"
-                                src="img/sirocco.jpg">
-                        </a>
-                    </div>
-                    <div class="client-col">
-                        <a href="https://ws-plan.pro/" rel="noopener" target="_blank"> <img alt="ワークショップ設計所"
-                                src="img/ws-sekkeisho.png">
-                        </a>
-                    </div>
-                    <!-- <div class="client-col clearleft">
-                        <a href="https://sites.google.com/view/gonengo/index" rel="noopener" target="_blank">
-                            <img alt="gonengo_logo" src="img/gonengo_logo.jpg">
-                        </a>
-                    </div> -->
-                    <div class="client-col">
-                        <a href="https://iis.edu.tama.ac.jp/" rel="noopener" target="_blank"> <img alt="多摩大学出原研究室"
-                                src="img/tamalogo.png">
-                        </a>
-                    </div>
-                </div>
-                <div class="section-desc" style="padding-left: 24px;padding-right: 24px;">
-                    <p style="text-align: center;font-size: 24px;">個人の方からの協賛</p>
                     <div class="row">
+                        <div class="col-12">
+                            <div class="prize">
+                                <div class="surface prize-box award_content" style="top: 205px;">
+                                    <img alt="trophy" class="mr-5" src="img/trophy2.png" />
+                                    <div class="award_frame">
+                                        <span class="award_title">優秀賞<br style="line-height: 4px;"></span>Amazonギフト券 1万円
+                                        + Wolfram 賞
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="surface prize-box award_content" style="top:405px;">
+                                <img alt="trophy" class="mr-5" src="img/trophy3.png" />
+                                <div class="award_frame">
+                                    <span class="award_title">3位賞<br style="line-height: 4px;"></span>Amazonギフト券 5千円 +
+                                    Wolfram 賞
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="surface prize-box award_content" style="top:605px;">
+                                <!-- <img alt="trophy" class="mr-5" src="img/trophy4.png" /> -->
+                                <div class="award_frame">
+                                    <span class="award_title">4位賞<br style="line-height: 4px;"></span>Wolfram 賞
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="surface prize-box award_content" style="top:805px;">
+                                <!-- <img alt="trophy" class="mr-5" src="img/trophy5.png" /> -->
+                                <div class="award_frame">
+                                    <span class="award_title">5位賞<br style="line-height: 4px;"></span>Wolfram 賞
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-content-area custom-section-content"></div>
+    </div>
+    </section>
+
+    <section class="section-padding section-clients onepage-section" id="cloudfunding">
+        <div class="container">
+            <div class="section-title-area">
+                <h1 class="section-subtitle">sponsor</h1>
+                <h1 class="section-title">協賛</h1>
+            </div>
+            <div class="clients-wrapper slideInUp client-5-cols">
+                <div class="client-col">
+                    <a href="https://www.goga-analysis.co.jp/" rel="noopener" target="_blank"> <img
+                            alt="株式会社ゴーガ解析コンサルティング" src="img/goga.jpg">
+                    </a>
+                </div>
+                <div class="client-col">
+                    <a href="https://www.wolfram.com/?source=nav" rel="noopener" target="_blank"> <img
+                            alt="Wolfram Research, Inc." src="img/wolfram.png">
+                    </a>
+                </div>
+                <div class="client-col">
+                    <a href="https://x-mov.jp/" rel="noopener" target="_blank"> <img alt="X-movJapan株式会社"
+                            src="img/XmovJapan.png">
+                    </a>
+                </div>
+                <div class="client-col">
+                    <a href="https://www.sirocco.jp/" rel="noopener" target="_blank"> <img alt="チームシロッコ合同会社"
+                            src="img/sirocco.jpg">
+                    </a>
+                </div>
+                <div class="client-col">
+                    <a href="https://ws-plan.pro/" rel="noopener" target="_blank"> <img alt="ワークショップ設計所"
+                            src="img/ws-sekkeisho.png">
+                    </a>
+                </div>
+                <div class="client-col">
+                    <a href="https://iis.edu.tama.ac.jp/" rel="noopener" target="_blank"> <img alt="多摩大学出原研究室"
+                            src="img/tamalogo.png">
+                    </a>
+                </div>
+            </div>
+            <div class="section-desc" style="padding-left: 24px;padding-right: 24px;">
+                <p style="text-align: center;font-size: 24px;">個人の方からの協賛</p>
+                <div class="row">
                     <div class="col-4">
                         井上 貴文様
                     </div>
@@ -7820,241 +7886,231 @@ mjx-mid mjx-c::before { padding-top: 0.13em !important; } */
                     </p>
                 </div>
             </div>
-        </section>
+    </section>
 
-        <section class="section-sid1580376509061 onepage-section section-meta section-padding" id="sid1580376509061">
-            <div class="container">
-                <div class="section-title-area">
-                    <h1 class="section-subtitle">members</h1>
-                    <h1 class="section-title">大会本部</h1>
-                    <div class="row mt-5">
-                        <div class="section-desc">
-                            <table class="mce-item-table"
-                                data-mce-style="border-collapse: collapse; width: 100%; height: 260px;"
-                                style="border-collapse: collapse;width: 100%;height: 260px">
-                                <tbody>
-                                    <tr data-mce-style="height: 18px;" style="height: 18px">
-                                        <td style="width: 15.8236%;height: 18px;text-align: left">実行委員長</td>
-                                        <td style="width: 19.40927819706499%;height: 18px;text-align: left">種村 圭依人
-                                        </td>
-                                        <td style="width: 64.76712180293501%;height: 18px;text-align: left">
-                                            関西学院大学総合政策学部
-                                        </td>
-                                    </tr>
-                                    <!-- <tr data-mce-style="height: 18px;" style="height: 18px">
+    <section class="section-sid1580376509061 onepage-section section-meta section-padding" id="sid1580376509061">
+        <div class="container">
+            <div class="section-title-area">
+                <h1 class="section-subtitle">members</h1>
+                <h1 class="section-title">大会本部</h1>
+                <div class="row mt-5">
+                    <div class="section-desc">
+                        <table class="mce-item-table"
+                            data-mce-style="border-collapse: collapse; width: 100%; height: 260px;"
+                            style="border-collapse: collapse;width: 100%;height: 260px">
+                            <tbody>
+                                <tr data-mce-style="height: 18px;" style="height: 18px">
+                                    <td style="width: 15.8236%;height: 18px;text-align: left">実行委員長</td>
+                                    <td style="width: 19.40927819706499%;height: 18px;text-align: left">種村 圭依人
+                                    </td>
+                                    <td style="width: 64.76712180293501%;height: 18px;text-align: left">
+                                        関西学院大学総合政策学部
+                                    </td>
+                                </tr>
+                                <!-- <tr data-mce-style="height: 18px;" style="height: 18px">
                                         <td style="width: 15.8236%;height: 18px;text-align: left">実行委員</td>
                                         <td style="width: 19.40927819706499%;height: 18px;text-align: left">大日 蒼
                                         </td>
                                         <td style="width: 64.76712180293501%;height: 18px;text-align: left">
                                             null
                                         </td>
-                                    </tr>
-                                    <tr data-mce-style="height: 18px;" style="height: 18px">
-                                        <td data-mce-style="width: 15.8236%; height: 18px; text-align: left;"
-                                            style="width: 15.8236%;height: 18px;text-align: left">
-                                            実行委員
-                                        </td>
-                                        <td data-mce-style="width: 19.40927819706499%; height: 18px; text-align: left;"
-                                            style="width: 19.40927819706499%;height: 18px;text-align: left">
-                                            坂本 悠輔
-                                        </td>
                                     </tr> -->
-                                    <tr data-mce-style="height: 18px;" style="height: 18px">
-                                        <td style="width: 15.8236%;text-align: left;height: 18px">顧問</td>
-                                        <td style="width: 19.40927819706499%;text-align: left;height: 18px">宮寺 良平
-                                        </td>
-                                        <td style="width: 64.76712180293501%;text-align: left;height: 18px">
-                                            啓明学院中学校高等学校理数教育アドバイザー、理学博士
-                                        </td>
-                                    </tr>
-                                    <tr data-mce-style="height: 33px;" style="height: 33px">
-                                        <td style="width: 15.8236%;text-align: left;height: 33px">顧問</td>
-                                        <td style="width: 19.40927819706499%;text-align: left;height: 33px">内田 芳宏
-                                        </td>
-                                        <td style="width: 64.76712180293501%;text-align: left;height: 33px">
-                                            立教池袋中学校高等学校教務部長
-                                        </td>
-                                    </tr>
-                                    <tr data-mce-style="height: 18px;" style="height: 18px">
-                                        <td style="width: 15.8236%;height: 18px;text-align: left">審査員</td>
-                                        <td style="width: 19.40927819706499%;height: 18px;text-align: left">巳波 弘佳
-                                        </td>
-                                        <td style="width: 64.76712180293501%;height: 18px;text-align: left">
-                                            関西学院大学工学部 情報工学課程教授、情報学博士、AI活用人材育成プログラム統括・学長補佐
-                                        </td>
-                                    </tr>
-                                    <tr data-mce-style="height: 18px;" style="height: 18px">
-                                        <td style="width: 15.8236%;height: 18px;text-align: left">審査員</td>
-                                        <td style="width: 19.40927819706499%;height: 18px;text-align: left">徳山 豪
-                                        </td>
-                                        <td style="width: 64.76712180293501%;height: 18px;text-align: left">
-                                            関西学院大学工学部 情報工学課程教授、東北大学名誉教授、理学博士
-                                        </td>
-                                    </tr>
-                                    <tr data-mce-style="height: 18px;" style="height: 18px">
-                                        <td style="width: 15.8236%;height: 18px;text-align: left">審査員</td>
-                                        <td style="width: 19.40927819706499%;height: 18px;text-align: left">篠原 彌一
-                                        </td>
-                                        <td style="width: 64.76712180293501%;height: 18px;text-align: left">
-                                            関西学院大学 名誉教授 （理学博士）
-                                        </td>
-                                    </tr>
-                                    <tr data-mce-style="height: 18px;" style="height: 18px">
-                                        <td style="width: 15.8236%;text-align: left;height: 18px">大会顧問</td>
-                                        <td style="width: 19.40927819706499%;text-align: left;height: 18px">中田 和宏
-                                        </td>
-                                        <td style="width: 64.76712180293501%;text-align: left;height: 18px">
-                                            関西学院高等部教諭、修士(理学)
-                                        </td>
-                                    </tr>
-                                    <tr data-mce-style="height: 18px;" style="height: 18px">
-                                        <td style="width: 15.8236%;text-align: left;height: 18px">コーチ</td>
-                                        <td style="width: 19.40927819706499%;text-align: left;height: 18px">青木 徹
-                                        </td>
-                                        <td style="width: 64.76712180293501%;text-align: left;height: 18px">修士(経済)
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="section-content-area custom-section-content"></div>
-                </div>
-        </section>
-        <!--        <section id="testimonials"-->
-        <!--            class="section-testimonials onepage-section section-meta section-padding section-padding-lg">-->
-        <!--            <div class="container">-->
-        <!--                <div class="section-title-area">-->
-        <!--                    <h1 class="section-subtitle">Testimonial</h1>-->
-        <!--                    <h1 class="section-title">推薦文</h1>-->
-        <!--                </div>-->
-        <!--                <div class="card-deck-wrapper">-->
-        <!--                    <div class="card-deck wow slideInUp">-->
-        <!--                        <div class="card card-inverse card-info">-->
-        <!--                            <div class="card-block">-->
-        <!--                                <div class="tes_author"></div>-->
-        <!--                                <h4 class="card-title">宮寺 良平氏　-啓明学院中学校高等学校理数教育アドバイザー　理学博士　Wolfram Innovator-->
-        <!--                                    Award受賞者-</h4>-->
-        <!--                                <p class="card-text"></p>-->
-        <!--                                <p>人間がコンピュータの能力を十分に活用しながら競うコンテスト、これは素晴らしいアイデアです。このコンテストが世界に広がっていくことを願います。</p>-->
-        <!--                                <p></p>-->
-        <!--                            </div>-->
-        <!--                        </div>-->
-        <!--                        <div class="card card-inverse card-info">-->
-        <!--                            <div class="card-block">-->
-        <!--                                <div class="tes_author"></div>-->
-        <!--                                <h4 class="card-title">内田 芳宏氏　-立教池袋中学校高等学校教務部長　数理研究部顧問-</h4>-->
-        <!--                                <p class="card-text"></p>-->
-        <!--                                <p>新時代の数学のコンテストです。高校生が企画しましたが、その域を超えたコンテストです。多くの方の参加を希望します。</p>-->
-        <!--                                <p></p>-->
-        <!--                            </div>-->
-        <!--                        </div>-->
-        <!--                        <div class="card card-inverse card-info">-->
-        <!--                            <div class="card-block">-->
-        <!--                                <div class="tes_author"></div>-->
-        <!--                                <h4 class="card-title">福井 昌則氏　 -兵庫教育大学 教員養成・研修高度化センター 特命助教-</h4>-->
-        <!--                                <p class="card-text"></p>-->
-        <!--                                <p>-->
-        <!--                                    従来型の数学コンテストとは異なる新機軸のコンテスト、これが高校生の手によって行われる。これからの時代を支える彼ら彼女らが、テクノロジーをどのように使いこなして新しい道を切り開いていくか、今後の発展も見逃せない。-->
-        <!--                                </p>-->
-        <!--                                <p></p>-->
-        <!--                            </div>-->
-        <!--                        </div>-->
-        <!--                    </div>-->
-        <!--                    <div class="card-deck wow slideInUp">-->
-        <!--                        <div class="card card-inverse card-info">-->
-        <!--                            <div class="card-block">-->
-        <!--                                <div class="tes_author"></div>-->
-        <!--                                <h4 class="card-title">北島 宗雄氏　-国立大学法人長岡技術科学大学教授　工学博士　認知科学者-</h4>-->
-        <!--                                <p class="card-text"></p>-->
-        <!--                                <p>-->
-        <!--                                    計算機が得意なところを活かして、様々な問題への取り組みの速さと正確さを競うコンテストです。どのように活かすのかを考えるのは、参加する皆さんです。皆さんの柔軟な発想で，素晴らしいアイデアが多く出てくることを期待します。-->
-        <!--                                </p>-->
-        <!--                                <p></p>-->
-        <!--                            </div>-->
-        <!--                        </div>-->
-        <!--                    </div>-->
-        <!--                </div>-->
-        <!--            </div>-->
-        <!--        </section>-->
-        <section class="section-toha onepage-section section-meta section-padding" id="toha">
-            <div class="container">
-                <div class="section-title-area">
-                    <h1 class="section-subtitle">a chance to do something</h1>
-                    <h1 class="section-title">きっかけ</h1>
-                    <div class="section-desc">
-                        <p>
-                            近年、AIの進歩が注目され、ヒトはAIに抜かれるのではないか，どのAIが優れているのかといったことが話題になっています。しかし、私達はヒトがAIなどのテクノロジーを最大限に活用することで、今までになかった結果が得られるはずだと考えています。
-                        </p>
-                        <p>
-                            ヒトがテクノロジー（この場合は、数式処理システムやプログラミング）を上手く活用して応用することや数学力、思考力の重要性を知ってもらいたいと考え、「人間の最大の力を競う数学の大会」と題し<strong>コンピューターの使用を認める解き方を制限しない数学のコンテスト</strong>を企画し開催します。
-                        </p>
+                                <tr data-mce-style="height: 18px;" style="height: 18px">
+                                    <td style="width: 15.8236%;text-align: left;height: 18px">顧問</td>
+                                    <td style="width: 19.40927819706499%;text-align: left;height: 18px">宮寺 良平
+                                    </td>
+                                    <td style="width: 64.76712180293501%;text-align: left;height: 18px">
+                                        啓明学院中学校高等学校理数教育アドバイザー、理学博士
+                                    </td>
+                                </tr>
+                                <tr data-mce-style="height: 33px;" style="height: 33px">
+                                    <td style="width: 15.8236%;text-align: left;height: 33px">顧問</td>
+                                    <td style="width: 19.40927819706499%;text-align: left;height: 33px">内田 芳宏
+                                    </td>
+                                    <td style="width: 64.76712180293501%;text-align: left;height: 33px">
+                                        立教池袋中学校高等学校教務部長
+                                    </td>
+                                </tr>
+                                <tr data-mce-style="height: 18px;" style="height: 18px">
+                                    <td style="width: 15.8236%;height: 18px;text-align: left">審査員</td>
+                                    <td style="width: 19.40927819706499%;height: 18px;text-align: left">巳波 弘佳
+                                    </td>
+                                    <td style="width: 64.76712180293501%;height: 18px;text-align: left">
+                                        関西学院大学工学部 情報工学課程教授、情報学博士、AI活用人材育成プログラム統括・学長補佐
+                                    </td>
+                                </tr>
+                                <tr data-mce-style="height: 18px;" style="height: 18px">
+                                    <td style="width: 15.8236%;height: 18px;text-align: left">審査員</td>
+                                    <td style="width: 19.40927819706499%;height: 18px;text-align: left">徳山 豪
+                                    </td>
+                                    <td style="width: 64.76712180293501%;height: 18px;text-align: left">
+                                        関西学院大学工学部 情報工学課程教授、東北大学名誉教授、理学博士
+                                    </td>
+                                </tr>
+                                <tr data-mce-style="height: 18px;" style="height: 18px">
+                                    <td style="width: 15.8236%;height: 18px;text-align: left">審査員</td>
+                                    <td style="width: 19.40927819706499%;height: 18px;text-align: left">篠原 彌一
+                                    </td>
+                                    <td style="width: 64.76712180293501%;height: 18px;text-align: left">
+                                        関西学院大学 名誉教授 （理学博士）
+                                    </td>
+                                </tr>
+                                <tr data-mce-style="height: 18px;" style="height: 18px">
+                                    <td style="width: 15.8236%;text-align: left;height: 18px">大会顧問</td>
+                                    <td style="width: 19.40927819706499%;text-align: left;height: 18px">中田 和宏
+                                    </td>
+                                    <td style="width: 64.76712180293501%;text-align: left;height: 18px">
+                                        関西学院高等部教諭、修士(理学)
+                                    </td>
+                                </tr>
+                                <tr data-mce-style="height: 18px;" style="height: 18px">
+                                    <td style="width: 15.8236%;text-align: left;height: 18px">コーチ</td>
+                                    <td style="width: 19.40927819706499%;text-align: left;height: 18px">青木 徹
+                                    </td>
+                                    <td style="width: 64.76712180293501%;text-align: left;height: 18px">修士(経済)
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <div class="section-content-area custom-section-content"></div>
             </div>
-        </section>
-
-        <section class="onepage-section section-meta section-padding" id="aisatu">
-            <div class="container">
-                <div class="section-title-area">
-                    <h1 class="section-title">ご挨拶</h1>
-                    <div class="section-desc">
-                        <p data-mce-style="text-align: left;" style="text-align: left">
-                            大会に興味を持って頂きありがとうございます。私たちは、この大会を通じて、数学とプログラミングの重要性を広めるとともに、数学を心から楽しみ、もっと好きになってもらえるような場をつくりたいと思っています。参加者の皆様には「<strong>数学は公式を暗記するだけではない</strong>」ということを感じてもらえれば嬉しいです。数学好きをもっと増やすために，皆さまの応援・ご支援をお願いいたします。
-                        </p>
-                        <p class="text-right">人の最大の力を競う数学の大会実行委員長 種村圭依人</p>
-                    </div>
+    </section>
+    <!--        <section id="testimonials"-->
+    <!--            class="section-testimonials onepage-section section-meta section-padding section-padding-lg">-->
+    <!--            <div class="container">-->
+    <!--                <div class="section-title-area">-->
+    <!--                    <h1 class="section-subtitle">Testimonial</h1>-->
+    <!--                    <h1 class="section-title">推薦文</h1>-->
+    <!--                </div>-->
+    <!--                <div class="card-deck-wrapper">-->
+    <!--                    <div class="card-deck wow slideInUp">-->
+    <!--                        <div class="card card-inverse card-info">-->
+    <!--                            <div class="card-block">-->
+    <!--                                <div class="tes_author"></div>-->
+    <!--                                <h4 class="card-title">宮寺 良平氏　-啓明学院中学校高等学校理数教育アドバイザー　理学博士　Wolfram Innovator-->
+    <!--                                    Award受賞者-</h4>-->
+    <!--                                <p class="card-text"></p>-->
+    <!--                                <p>人間がコンピュータの能力を十分に活用しながら競うコンテスト、これは素晴らしいアイデアです。このコンテストが世界に広がっていくことを願います。</p>-->
+    <!--                                <p></p>-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="card card-inverse card-info">-->
+    <!--                            <div class="card-block">-->
+    <!--                                <div class="tes_author"></div>-->
+    <!--                                <h4 class="card-title">内田 芳宏氏　-立教池袋中学校高等学校教務部長　数理研究部顧問-</h4>-->
+    <!--                                <p class="card-text"></p>-->
+    <!--                                <p>新時代の数学のコンテストです。高校生が企画しましたが、その域を超えたコンテストです。多くの方の参加を希望します。</p>-->
+    <!--                                <p></p>-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                        <div class="card card-inverse card-info">-->
+    <!--                            <div class="card-block">-->
+    <!--                                <div class="tes_author"></div>-->
+    <!--                                <h4 class="card-title">福井 昌則氏　 -兵庫教育大学 教員養成・研修高度化センター 特命助教-</h4>-->
+    <!--                                <p class="card-text"></p>-->
+    <!--                                <p>-->
+    <!--                                    従来型の数学コンテストとは異なる新機軸のコンテスト、これが高校生の手によって行われる。これからの時代を支える彼ら彼女らが、テクノロジーをどのように使いこなして新しい道を切り開いていくか、今後の発展も見逃せない。-->
+    <!--                                </p>-->
+    <!--                                <p></p>-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                    <div class="card-deck wow slideInUp">-->
+    <!--                        <div class="card card-inverse card-info">-->
+    <!--                            <div class="card-block">-->
+    <!--                                <div class="tes_author"></div>-->
+    <!--                                <h4 class="card-title">北島 宗雄氏　-国立大学法人長岡技術科学大学教授　工学博士　認知科学者-</h4>-->
+    <!--                                <p class="card-text"></p>-->
+    <!--                                <p>-->
+    <!--                                    計算機が得意なところを活かして、様々な問題への取り組みの速さと正確さを競うコンテストです。どのように活かすのかを考えるのは、参加する皆さんです。皆さんの柔軟な発想で，素晴らしいアイデアが多く出てくることを期待します。-->
+    <!--                                </p>-->
+    <!--                                <p></p>-->
+    <!--                            </div>-->
+    <!--                        </div>-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </section>-->
+    <section class="section-toha onepage-section section-meta section-padding" id="toha">
+        <div class="container">
+            <div class="section-title-area">
+                <h1 class="section-subtitle">a chance to do something</h1>
+                <h1 class="section-title">きっかけ</h1>
+                <div class="section-desc">
+                    <p>
+                        近年、AIの進歩が注目され、ヒトはAIに抜かれるのではないか，どのAIが優れているのかといったことが話題になっています。しかし、私達はヒトがAIなどのテクノロジーを最大限に活用することで、今までになかった結果が得られるはずだと考えています。
+                    </p>
+                    <p>
+                        ヒトがテクノロジー（この場合は、数式処理システムやプログラミング）を上手く活用して応用することや数学力、思考力の重要性を知ってもらいたいと考え、「人間の最大の力を競う数学の大会」と題し<strong>コンピューターの使用を認める解き方を制限しない数学のコンテスト</strong>を企画し開催します。
+                    </p>
                 </div>
-                <div class="section-content-area custom-section-content"></div>
             </div>
-        </section>
+            <div class="section-content-area custom-section-content"></div>
+        </div>
+    </section>
 
-
-        <section class="section-sid1581951034483 onepage-section section-meta section-padding" id="sid1581951034483">
-            <div class="container">
-                <div class="section-title-area">
-                    <h1 class="section-title">企業からのメッセージ</h1>
-                    <div class="section-desc">
-                        <p data-mce-style="text-align: left;" style="text-align: left">
-                            「速さ」「正確性」を如何に定義するか。<br>
-                            そして、自身が定義した「速さ」「正確性」を、如何にして実現するか。</p>
-                        <p data-mce-style="text-align: left;" style="text-align: left">
-                            これらの課題を深堀りすれば、それは即ち、品質と生産性に直結していきます。</p>
-                        <p data-mce-style="text-align: left;" style="text-align: left">
-                            受託開発や社内開発でも、ITの現場では、アジャイルだのマイクロサービスだのと迅速な開発に対する期待は高まり続けています。しかし一方で、そんな迅速開発が出来るエンジニアやアーキテクトが存在するのかと言われれば、限られているのが現実です。
-                        </p>
-                        <p data-mce-style="text-align: left;" style="text-align: left">
-                            実務の現場では、知らない誰かが書いたコードを安全に修正しなければならないことが多々あります。この課題を解決するために、人手人海戦術でのテストを積み重ねることが、本当に行われています。
-                        </p>
-                        <p data-mce-style="text-align: left;" style="text-align: left">
-                            でもこの事態は、「正確性」の担保がプログラムの構造に含まれていないために「速さ」が犠牲になっているはずだ、と言い換えても良いのではないでしょうか。</p>
-                        <p data-mce-style="text-align: left;" style="text-align: left">
-                            皆さんなら、この課題に、つまり「速さ」を獲得するための「正確性」の担保に、どう取り組みますか。</p>
-                        <p data-mce-style="text-align: left;" style="text-align: left">
-                            開発言語が持つ型の活用、プログラム構造の最適化、コードやテストの自動生成、テスト自動化でのCI指向など、泥臭い人間技でのアプローチを避け、人間の知恵を最大限に活用するソリューションも、状況を改善するはずです。
-                        </p>
-                        <p data-mce-style="text-align: left;" style="text-align: left">
-                            この観点で、学生時代に、新人研修時代に、懇切丁寧に教えてくれる組織は、あまり見ません。趣味の場合なら、書くことが楽しいはずで、自身のアウトプットの生産性にはあまりこだわらないでしょう。
-                        </p>
-                        <p data-mce-style="text-align: left;" style="text-align: left">計算は物理的限界に左右されます。</p>
-                        <p data-mce-style="text-align: left;" style="text-align: left">
-                            それが脳内であれば脳の活動限界に制限されますし、CPUを使った演算であれば、電子の移動や配線の能力限界など、量子効果まで含めて、そこに限界が存在しています。</p>
-                        <p data-mce-style="text-align: left;" style="text-align: left">
-                            「速さ」「正確性」への挑戦とは、その限界にまでプロセスのエネルギー状態を近づける行為だとして問題はないはず、それは即ち、品質と生産性に繋がっていきます。</p>
-                        <p data-mce-style="text-align: left;" style="text-align: left">
-                            この大会を通して楽しみながら実現されていく数々の「速さ」「正確性」への挑戦が、人の知恵の集結として豊かな未来を形づくることになっていう確信があります。それこそをイノベーションというのでしょう。全力で楽しみ、イノベーションを実現していきましょう。
-                        </p>
-                        <p data-mce-style="text-align: right;" style="text-align: right">チームシロッコ合同会社　代表執行役員社長 /
-                            特装開発事業部長　谷口　有近</p>
-                    </div>
+    <section class="onepage-section section-meta section-padding" id="aisatu">
+        <div class="container">
+            <div class="section-title-area">
+                <h1 class="section-title">ご挨拶</h1>
+                <div class="section-desc">
+                    <p data-mce-style="text-align: left;" style="text-align: left">
+                        大会に興味を持って頂きありがとうございます。私たちは、この大会を通じて、数学とプログラミングの重要性を広めるとともに、数学を心から楽しみ、もっと好きになってもらえるような場をつくりたいと思っています。参加者の皆様には「<strong>数学は公式を暗記するだけではない</strong>」ということを感じてもらえれば嬉しいです。数学好きをもっと増やすために，皆さまの応援・ご支援をお願いいたします。
+                    </p>
+                    <p class="text-right">人の最大の力を競う数学の大会実行委員長 種村圭依人</p>
                 </div>
-                <div class="section-content-area custom-section-content"></div>
             </div>
-        </section>
+            <div class="section-content-area custom-section-content"></div>
+        </div>
+    </section>
 
 
-        <!--
+    <section class="section-sid1581951034483 onepage-section section-meta section-padding" id="sid1581951034483">
+        <div class="container">
+            <div class="section-title-area">
+                <h1 class="section-title">企業からのメッセージ</h1>
+                <div class="section-desc">
+                    <p data-mce-style="text-align: left;" style="text-align: left">
+                        「速さ」「正確性」を如何に定義するか。<br>
+                        そして、自身が定義した「速さ」「正確性」を、如何にして実現するか。</p>
+                    <p data-mce-style="text-align: left;" style="text-align: left">
+                        これらの課題を深堀りすれば、それは即ち、品質と生産性に直結していきます。</p>
+                    <p data-mce-style="text-align: left;" style="text-align: left">
+                        受託開発や社内開発でも、ITの現場では、アジャイルだのマイクロサービスだのと迅速な開発に対する期待は高まり続けています。しかし一方で、そんな迅速開発が出来るエンジニアやアーキテクトが存在するのかと言われれば、限られているのが現実です。
+                    </p>
+                    <p data-mce-style="text-align: left;" style="text-align: left">
+                        実務の現場では、知らない誰かが書いたコードを安全に修正しなければならないことが多々あります。この課題を解決するために、人手人海戦術でのテストを積み重ねることが、本当に行われています。
+                    </p>
+                    <p data-mce-style="text-align: left;" style="text-align: left">
+                        でもこの事態は、「正確性」の担保がプログラムの構造に含まれていないために「速さ」が犠牲になっているはずだ、と言い換えても良いのではないでしょうか。</p>
+                    <p data-mce-style="text-align: left;" style="text-align: left">
+                        皆さんなら、この課題に、つまり「速さ」を獲得するための「正確性」の担保に、どう取り組みますか。</p>
+                    <p data-mce-style="text-align: left;" style="text-align: left">
+                        開発言語が持つ型の活用、プログラム構造の最適化、コードやテストの自動生成、テスト自動化でのCI指向など、泥臭い人間技でのアプローチを避け、人間の知恵を最大限に活用するソリューションも、状況を改善するはずです。
+                    </p>
+                    <p data-mce-style="text-align: left;" style="text-align: left">
+                        この観点で、学生時代に、新人研修時代に、懇切丁寧に教えてくれる組織は、あまり見ません。趣味の場合なら、書くことが楽しいはずで、自身のアウトプットの生産性にはあまりこだわらないでしょう。
+                    </p>
+                    <p data-mce-style="text-align: left;" style="text-align: left">計算は物理的限界に左右されます。</p>
+                    <p data-mce-style="text-align: left;" style="text-align: left">
+                        それが脳内であれば脳の活動限界に制限されますし、CPUを使った演算であれば、電子の移動や配線の能力限界など、量子効果まで含めて、そこに限界が存在しています。</p>
+                    <p data-mce-style="text-align: left;" style="text-align: left">
+                        「速さ」「正確性」への挑戦とは、その限界にまでプロセスのエネルギー状態を近づける行為だとして問題はないはず、それは即ち、品質と生産性に繋がっていきます。</p>
+                    <p data-mce-style="text-align: left;" style="text-align: left">
+                        この大会を通して楽しみながら実現されていく数々の「速さ」「正確性」への挑戦が、人の知恵の集結として豊かな未来を形づくることになっていう確信があります。それこそをイノベーションというのでしょう。全力で楽しみ、イノベーションを実現していきましょう。
+                    </p>
+                    <p data-mce-style="text-align: right;" style="text-align: right">チームシロッコ合同会社　代表執行役員社長 /
+                        特装開発事業部長　谷口　有近</p>
+                </div>
+            </div>
+            <div class="section-content-area custom-section-content"></div>
+        </div>
+    </section>
+
+
+    <!--
      <section id="about" class="section-about section-padding onepage-section">
         <div class="container">
             <div class="section-title-area">
@@ -8069,201 +8125,206 @@ mjx-mid mjx-c::before { padding-top: 0.13em !important; } */
 </div>
 </section>  -->
 
-        <section class="section-news section-padding onepage-section" id="news">
-            <div class="container">
-                <div class="section-title-area">
-                    <h1 class="section-subtitle">news &amp; notice</h1>
-                    <h1 class="section-title">お知らせ｜記事</h1>
-                </div>
-                <div class="section-content">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="blog-entry wow slideInUp">
-                                <article
-                                    class="list-article clearfix post-738 post type-post status-publish format-standard hentry category-1"
-                                    id="post-738">
-                                    <div class="list-article-thumb">
-                                        <a href="program.html">
-                                            <img alt="数学コンテストの画像" src="img/placholder2.png"> </a>
-                                    </div>
-                                    <div class="list-article-content">
-                                        <header class="entry-header">
-                                            <h2 class="entry-title"><a class="text-info" href="program.html"
-                                                    rel="bookmark">「人の最大の力を競う数学の大会」の当日スケジュールについて</a>
-                                            </h2>
-                                        </header>
-                                        <div class="entry-excerpt">
-                                            <p>2023年3月11日にて「人の最大の力を競う数学 …（詳細をご覧になられる方はタイトルをクリックしてください）</p>
-                                        </div>
-                                    </div>
-                                </article>
-                                <article
-                                    class="list-article clearfix post-493 post type-post status-publish format-standard hentry category-1 tag-13 tag-12"
-                                    id="post-493">
-                                    <div class="list-article-thumb">
-                                        <a href="rule.html">
-                                            <img alt="数学コンテストのルールの画像" src="img/placholder2.png"> </a>
-                                    </div>
-                                    <div class="list-article-content">
-                                        <header class="entry-header">
-                                            <h2 class="entry-title"><a class="text-info" href="rule.html"
-                                                    rel="bookmark">大会のルール、詳細について</a>
-                                            </h2>
-                                        </header>
-                                        <div class="entry-excerpt">
-                                            <p>ルール 6時間で中学入試・算数オリンピックレベルの算数の
-                                                …（ルールの詳細をご覧になられる方はタイトルをクリックしてください）</p>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <section class="section-news section-padding onepage-section" id="news">
+        <div class="container">
+            <div class="section-title-area">
+                <h1 class="section-subtitle">news &amp; notice</h1>
+                <h1 class="section-title">お知らせ｜記事</h1>
             </div>
-        </section>
-        <section class="section-sid1581329423057 onepage-section section-meta section-padding" id="sid1581329423057">
-            <div class="container">
-                <div class="section-title-area">
-                    <h1 class="section-title">掲載メディア</h1>
-                    <div class="section-desc">
-                        <p style="text-align: left">2021.02.16 &nbsp;&nbsp;<span
-                                class="box">新聞</span>「朝日新聞」にて当イベントについて取材、掲載いただきました。<a
-                                href="https://www.asahi.com/articles/ASN2H72DGN10PIHB00R.html?iref=pc_ss_date"
-                                title="計算機Ｘ直観力＝新たな創造　高校生らが大会企画">記事を見る</a></p>
-                        <hr>
-                        <p style="text-align: left">2021.02.10 &nbsp;&nbsp;<span
-                                class="box">WEB</span>「EdTechZine（エドテックジン）」にて当イベントについて掲載いただきました。<a
-                                href="https://edtechzine.jp/article/detail/3282"
-                                title="あらゆる方法で算数の問題を解く「人の最大の力を競う数学の大会」、3月に東京と大阪で開催">記事を見る</a></p>
-                        <hr>
-                        <p style="text-align: left">2021.02.07 &nbsp; <span
-                                class="box">WEB</span>　「BIGLOBE」にて当イベントについて掲載いただきました。<a
-                                href="https://news.biglobe.ne.jp/trend/0207/res_200207_8285498267.html"
-                                title="人の最大の力を競う数学の大会、2/28まで参加者募集">記事を見る</a></p>
-                        <hr>
-                        <p style="text-align: left">2021.02.07 &nbsp; <span
-                                class="box">WEB</span>　「Amebaニュース」にて当イベントについて掲載いただきました。<a
-                                href="https://news.ameba.jp/entry/20210207-755/"
-                                title="人の最大の力を競う数学の大会、2/28まで参加者募集 Ameba">記事を見る</a>
-                        </p>
-                        <hr>
-                        <p style="text-align: left">2021.02.07 &nbsp; <span
-                                class="box">WEB</span>　「ReseMom」にて当イベントについて掲載いただきました。<a
-                                href="https://resemom.jp/article/2021/02/07/54671.html"
-                                title="人の最大の力を競う数学の大会、2/28まで参加者募集 ReseMom">記事を見る</a></p>
-                        <hr>
-                        <p style="text-align: left">2021.02.07 &nbsp;&nbsp;<span class="box">WEB</span>
-                            「ICT教育ニュース」にて当イベントについて掲載いただきました。<a
-                                href="https://ict-enews.net/2021/02/07mathcompetition2021/"
-                                title="高校生が運営するパソコンもネットも使える「人の最大の力を競う数学の大会」3月開催">記事を見る</a>
-                        </p>
-                        <hr>
-                        <p style="text-align: left">2021.02.05 &nbsp;&nbsp;<span
-                                class="box">新聞</span>　「神戸新聞」にて当イベントについて取材、掲載いただきました。<a
-                                href="https://www.kobe-np.co.jp/news/hanshin/202102/0013088981.shtml"
-                                title="解答手段の制限ない計算大会　東京と大阪で３月開催">記事を見る</a></p>
-                        <hr>
-                        <p style="text-align: left">2019.12.30 &nbsp;&nbsp;<span class="box">WEB</span>
-                            &nbsp;「ICT教育ニュース」にて当イベントについて掲載いただきました。<a href="https://ict-enews.net/2019/12/28camc/"
-                                title="高校生主催「人の最大の力を競う数学の大会」実施でクラウドファンティング">記事を見る</a>
-                        </p>
-                        <hr>
-                        <p class="text-center">メディア、取材についてのお問い合わせは、<a
-                                href="https://form.run/@computer-aided-math-competition-2023-support">こちら</a>からお問い合わせください。
-                        </p>
-                    </div>
-                </div>
-                <div class="section-content-area custom-section-content"></div>
-            </div>
-        </section>
-        <section class="section-cta section-padding section-inverse" id="section-cta">
-            <div class="container">
+            <div class="section-content">
                 <div class="row">
-                    <div class="col-md-12 col-lg-9 cta-heading">
-                        <h2>関東大会、関西大会に出場を希望される方はエントリーをお願いします。</h2>
-                    </div>
-                    <div class="col-md-12 col-lg-3 cta-button-area">
-                        <a class="btn btn-theme-primary-outline"
-                            href="https://docs.google.com/forms/d/e/1FAIpQLSdSjUuhkVnZGXulZ3R9rk4Rd0frSR8FNsdJFACRZ-D3vkC0yQ/viewform?usp=sf_link">エントリーする</a>
+                    <div class="col-sm-12">
+                        <div class="blog-entry wow slideInUp">
+                            <article
+                                class="list-article clearfix post-738 post type-post status-publish format-standard hentry category-1"
+                                id="post-738">
+                                <div class="list-article-thumb">
+                                    <a href="program.html">
+                                        <img alt="数学コンテストの画像" src="img/placholder2.png"> </a>
+                                </div>
+                                <div class="list-article-content">
+                                    <header class="entry-header">
+                                        <h2 class="entry-title"><a class="text-info" href="program.html"
+                                                rel="bookmark">「人の最大の力を競う数学の大会」の当日スケジュールについて</a>
+                                        </h2>
+                                    </header>
+                                    <div class="entry-excerpt">
+                                        <p>2023年3月11日にて「人の最大の力を競う数学 …（詳細をご覧になられる方はタイトルをクリックしてください）</p>
+                                    </div>
+                                </div>
+                            </article>
+                            <article
+                                class="list-article clearfix post-493 post type-post status-publish format-standard hentry category-1 tag-13 tag-12"
+                                id="post-493">
+                                <div class="list-article-thumb">
+                                    <a href="rule.html">
+                                        <img alt="数学コンテストのルールの画像" src="img/placholder2.png"> </a>
+                                </div>
+                                <div class="list-article-content">
+                                    <header class="entry-header">
+                                        <h2 class="entry-title"><a class="text-info" href="rule.html"
+                                                rel="bookmark">大会のルール、詳細について</a>
+                                        </h2>
+                                    </header>
+                                    <div class="entry-excerpt">
+                                        <p>ルール 6時間で中学入試・算数オリンピックレベルの算数の
+                                            …（ルールの詳細をご覧になられる方はタイトルをクリックしてください）</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <section class="section-contact section-padding  section-meta onepage-section" id="contact">
-            <div class="container">
-                <div class="section-title-area">
-                    <h1 class="section-subtitle">contact</h1>
-                    <h1 class="section-title">お問い合わせ</h1>
+        </div>
+    </section>
+    <section class="section-sid1581329423057 onepage-section section-meta section-padding" id="sid1581329423057">
+        <div class="container">
+            <div class="section-title-area">
+                <h1 class="section-title">掲載メディア</h1>
+                <div class="section-desc">
+                    <p style="text-align: left">2021.02.16 &nbsp;&nbsp;<span
+                            class="box">新聞</span>「朝日新聞」にて当イベントについて取材、掲載いただきました。<a
+                            href="https://www.asahi.com/articles/ASN2H72DGN10PIHB00R.html?iref=pc_ss_date"
+                            title="計算機Ｘ直観力＝新たな創造　高校生らが大会企画">記事を見る</a></p>
+                    <hr>
+                    <p style="text-align: left">2021.02.10 &nbsp;&nbsp;<span
+                            class="box">WEB</span>「EdTechZine（エドテックジン）」にて当イベントについて掲載いただきました。<a
+                            href="https://edtechzine.jp/article/detail/3282"
+                            title="あらゆる方法で算数の問題を解く「人の最大の力を競う数学の大会」、3月に東京と大阪で開催">記事を見る</a></p>
+                    <hr>
+                    <p style="text-align: left">2021.02.07 &nbsp; <span
+                            class="box">WEB</span>　「BIGLOBE」にて当イベントについて掲載いただきました。<a
+                            href="https://news.biglobe.ne.jp/trend/0207/res_200207_8285498267.html"
+                            title="人の最大の力を競う数学の大会、2/28まで参加者募集">記事を見る</a></p>
+                    <hr>
+                    <p style="text-align: left">2021.02.07 &nbsp; <span
+                            class="box">WEB</span>　「Amebaニュース」にて当イベントについて掲載いただきました。<a
+                            href="https://news.ameba.jp/entry/20210207-755/"
+                            title="人の最大の力を競う数学の大会、2/28まで参加者募集 Ameba">記事を見る</a>
+                    </p>
+                    <hr>
+                    <p style="text-align: left">2021.02.07 &nbsp; <span
+                            class="box">WEB</span>　「ReseMom」にて当イベントについて掲載いただきました。<a
+                            href="https://resemom.jp/article/2021/02/07/54671.html"
+                            title="人の最大の力を競う数学の大会、2/28まで参加者募集 ReseMom">記事を見る</a></p>
+                    <hr>
+                    <p style="text-align: left">2021.02.07 &nbsp;&nbsp;<span class="box">WEB</span>
+                        「ICT教育ニュース」にて当イベントについて掲載いただきました。<a href="https://ict-enews.net/2021/02/07mathcompetition2021/"
+                            title="高校生が運営するパソコンもネットも使える「人の最大の力を競う数学の大会」3月開催">記事を見る</a>
+                    </p>
+                    <hr>
+                    <p style="text-align: left">2021.02.05 &nbsp;&nbsp;<span
+                            class="box">新聞</span>　「神戸新聞」にて当イベントについて取材、掲載いただきました。<a
+                            href="https://www.kobe-np.co.jp/news/hanshin/202102/0013088981.shtml"
+                            title="解答手段の制限ない計算大会　東京と大阪で３月開催">記事を見る</a></p>
+                    <hr>
+                    <p style="text-align: left">2019.12.30 &nbsp;&nbsp;<span class="box">WEB</span>
+                        &nbsp;「ICT教育ニュース」にて当イベントについて掲載いただきました。<a href="https://ict-enews.net/2019/12/28camc/"
+                            title="高校生主催「人の最大の力を競う数学の大会」実施でクラウドファンティング">記事を見る</a>
+                    </p>
+                    <hr>
+                    <p class="text-center">メディア、取材についてのお問い合わせは、<a
+                            href="https://form.run/@computer-aided-math-competition-2023-support">こちら</a>からお問い合わせください。
+                    </p>
                 </div>
-                <div class="row mx-auto">
-                    <form action="https://api.staticforms.xyz/submit" class="mx-auto" method="post">
-                        <input name="name" placeholder="あなたの名前" type="text">
-                        <input name="email" placeholder="返信先メールアドレス" type="text" />
-                        <textarea name="message" placeholder="内容"></textarea>
-                        <input name="honeypot" style="display:none" type="text">
-                        <input name="accessKey" type="hidden" value="95c7215d-6f76-450f-b7da-5927ac158ff4">
-                        <input name="subject" type="hidden" value="Contact us from - example.com" />
-                        <input name="replyTo" type="hidden" value="@">
-                        <input name="redirectTo" type="hidden" value="https://mathcompetition2020.com/">
-                        <input type="submit" value="Submit" />
-                    </form>
+            </div>
+            <div class="section-content-area custom-section-content"></div>
+        </div>
+    </section>
+    <section class="section-cta section-padding section-inverse" id="section-cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-9 cta-heading">
+                    <h2>出場を希望される方はエントリーをお願いします。</h2>
+                </div>
+                <div class="col-md-12 col-lg-3 cta-button-area">
+                    <a class="btn btn-theme-primary-outline"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSdSjUuhkVnZGXulZ3R9rk4Rd0frSR8FNsdJFACRZ-D3vkC0yQ/viewform?usp=sf_link">エントリーする</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section-contact section-padding  section-meta onepage-section" id="contact">
+        <div class="container">
+            <div class="section-title-area">
+                <h1 class="section-subtitle">contact</h1>
+                <h1 class="section-title">お問い合わせ</h1>
+            </div>
+            <div class="row mx-auto">
+                <form action="https://api.staticforms.xyz/submit" class="mx-auto" method="post">
+                    <input name="name" placeholder="あなたの名前" type="text">
+                    <input name="email" placeholder="返信先メールアドレス" type="text" />
+                    <textarea name="message" placeholder="内容"></textarea>
+                    <input name="honeypot" style="display:none" type="text">
+                    <input name="accessKey" type="hidden" value="95c7215d-6f76-450f-b7da-5927ac158ff4">
+                    <input name="subject" type="hidden" value="Contact us from - example.com" />
+                    <input name="replyTo" type="hidden" value="@">
+                    <input name="redirectTo" type="hidden" value="https://mathcompetition2020.com/">
+                    <input type="submit" value="Submit" />
+                </form>
 
-                    <div class="col-sm-12 wow slideInUp mt-4 text-center">
-                        <p><strong>下記メールアドレス</strong>からでもお問い合わせ可能です。2,3日以内にご返答させていただきます。</p>
-                        <br>
-                        <div class="address-box">
-                            <h3>人の最大の力を競う数学の大会実行委員会</h3>
-                            <div class="address-contact">
-                                <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i
-                                        class="fa fa-map-marker fa-stack-1x fa-inverse"></i></span>
-                                <!-- <div class="address-content">（関西）〒662-8501 兵庫県西宮市上ケ原一番町1-155（関東）〒171-0021 東京都豊島区西池袋５丁目１６−５</div> -->
-                            </div>
-                            <div class="address-contact">
-                                <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i
-                                        class="fa fa-envelope-o fa-stack-1x fa-inverse"></i></span>
-                                <div class="address-content"><a
-                                        href="mailto:support@mathcompetition2020.com">support@mathcompetition2020.com</a>
-                                </div>
+                <div class="col-sm-12 wow slideInUp mt-4 text-center">
+                    <p><strong>下記メールアドレス</strong>からでもお問い合わせ可能です。2,3日以内にご返答させていただきます。</p>
+                    <br>
+                    <div class="address-box">
+                        <h3>人の最大の力を競う数学の大会実行委員会</h3>
+                        <div class="address-contact">
+                            <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i
+                                    class="fa fa-map-marker fa-stack-1x fa-inverse"></i></span>
+                            <!-- <div class="address-content">（関西）〒662-8501 兵庫県西宮市上ケ原一番町1-155（関東）〒171-0021 東京都豊島区西池袋５丁目１６−５</div> -->
+                        </div>
+                        <div class="address-contact">
+                            <span class="fa-stack"><i class="fa fa-circle fa-stack-2x"></i><i
+                                    class="fa fa-envelope-o fa-stack-1x fa-inverse"></i></span>
+                            <div class="address-content"><a
+                                    href="mailto:support@mathcompetition2020.com">support@mathcompetition2020.com</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="section-contact section-padding onepage-section" id="thanks">
-            <div class="container">
-                <div class="section-title-area">
-                    <!-- <h1 class="section-subtitle">Special Thanks</h1> -->
-                    <h1 class="section-title">著作権表記</h1>
-                    <p class="my-3">このWebサイトを作成する上で以下所属の画像、イラストを使用しました。(登場順)</p>
-                    <a href="http://www.freepik.com">Designed by Freepik</a>
-
-
-                    <a href='https://www.freepik.com/free-photos-vectors/technology'>Top image. Technology vector
-                        created by
-                        macrovector - www.freepik.com</a>
+    <section class="section-contact section-padding onepage-section" id="thanks">
+        <div class="container">
+            <div class="section-title-area">
+                <!-- <h1 class="section-subtitle">Special Thanks</h1> -->
+                <h1 class="section-title">著作権表記</h1>
+                <p class="my-3">このWebサイトを作成する上で以下所属の画像、イラストを使用しました。(登場順)</p>
+                <a href="http://www.freepik.com">Designed by Freepik</a>
 
 
-                    <div>Icons made by <a href="https://www.flaticon.com/authors/fjstudio" title="fjstudio">fjstudio</a>
-                        from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+                <a href='https://www.freepik.com/free-photos-vectors/technology'>Top image. Technology vector
+                    created by
+                    macrovector - www.freepik.com</a>
 
-                    <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
-                            href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+                <a href="https://www.flaticon.com/free-icons/medal" title="medal icons">Medal icons created by Vectors
+                    Market - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icons/second" title="second icons">Second icons created by
+                    Smashicons - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icons/third" title="third icons">Third icons created by
+                    Smashicons - Flaticon</a>
 
-                    <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
-                            href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+                <div>Icons made by <a href="https://www.flaticon.com/authors/fjstudio" title="fjstudio">fjstudio</a>
+                    from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
-                    <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
-                            href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+                <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
+                        href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 
-                    <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
-                            href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-                </div>
+                <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
+                        href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+                <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
+                        href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+                <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
+                        href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
             </div>
-        </section>
-        </main>
+        </div>
+    </section>
+    </main>
     </div>
 
     </div>
@@ -8303,13 +8364,6 @@ mjx-mid mjx-c::before { padding-top: 0.13em !important; } */
             });
         }
     </script>
-    <script src="js/jquery.js"></script>
-    <!-- <script src="js/jquery-migrate-1.4.1.min.js"></script> -->
-    <!-- <script src="js/plugins.min.js"></script> -->
-    <!-- <script src="js/bootstrap.min.js"></script> -->
-    <script src="js/theme.js"></script>
-    <!-- <script src="js/jquery.bully.min.js"></script> -->
-
     <footer class="site-footer" id="colophon">
         <div class="site-info">
             <div class="container">
