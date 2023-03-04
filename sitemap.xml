@@ -9,22 +9,17 @@
 
 <url>
   <loc>https://mathcompetition2020.com/</loc>
-  <lastmod>2020-04-28T09:34:48+00:00</lastmod>
+  <lastmod>2023-02-28T09:34:48+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://mathcompetition2020.com/rule/</loc>
-  <lastmod>2020-04-28T07:03:45+00:00</lastmod>
+  <loc>https://mathcompetition2020.com/rule</loc>
+  <lastmod>2023-02-28T07:03:45+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://mathcompetition2020.com/program</loc>
-  <lastmod>2020-04-28T07:04:05+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://mathcompetition2020.com/postponed</loc>
-  <lastmod>2020-04-28T06:58:15+00:00</lastmod>
+  <lastmod>2023-02-28T07:04:05+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
