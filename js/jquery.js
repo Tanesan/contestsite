@@ -1333,9 +1333,9 @@
               i > 1 && sa(m),
               i > 1 &&
                 qa(
-                  a
-                    .slice(0, i - 1)
-                    .concat({ value: " " === a[i - 2].type ? "*" : "" })
+                  a.slice(0, i - 1).concat({
+                    value: " " === a[i - 2].type ? "*" : "",
+                  })
                 ).replace(Q, "$1"),
               c,
               e > i && wa(a.slice(i, e)),
@@ -5389,7 +5389,10 @@
               ? null
               : n.isArray(c)
               ? n.map(c, function (a) {
-                  return { name: b.name, value: a.replace(ac, "\r\n") };
+                  return {
+                    name: b.name,
+                    value: a.replace(ac, "\r\n"),
+                  };
                 })
               : { name: b.name, value: c.replace(ac, "\r\n") };
           })

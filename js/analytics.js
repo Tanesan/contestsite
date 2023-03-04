@@ -1,8 +1,8 @@
 (function () {
   /*
 
- Copyright The Closure Library Authors.
- SPDX-License-Identifier: Apache-2.0
+Copyright The Closure Library Authors.
+SPDX-License-Identifier: Apache-2.0
 */
   var m = this || self,
     n = function (a, b) {
@@ -490,8 +490,8 @@
     return b;
   } /*
 
- Copyright The Closure Library Authors.
- SPDX-License-Identifier: Apache-2.0
+Copyright The Closure Library Authors.
+SPDX-License-Identifier: Apache-2.0
 */
   var $c = function (a) {
     this.w = a || [];
@@ -2397,7 +2397,11 @@
   Yd = new ee();
   $d = new ee();
   A = new ee();
-  Zd = { ec: 45, ecommerce: 46, linkid: 47 };
+  Zd = {
+    ec: 45,
+    ecommerce: 46,
+    linkid: 47,
+  };
   var u = function (a, b, c) {
       b == N || b.get(V);
       var d = Yd.get(a);

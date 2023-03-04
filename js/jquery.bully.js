@@ -73,7 +73,9 @@
           offset = activeBullet.offset().top - bullyOffset.top;
         }
 
-        //var offset = $bully.children( '.c-bully__bullet' ).not( '.c-bully__bullet--active' ).first().outerHeight( true ) * ( count - 1 );
+        // var offset = $bully.children( '.c-bully__bullet' ).not(
+        // '.c-bully__bullet--active' ).first().outerHeight( true ) * ( count - 1
+        // );
 
         $current.removeClass("c-bully__bullet--squash");
         setTimeout(function () {
@@ -101,12 +103,12 @@
     $.each($elements, function (i, obj) {
       obj.$bullet.addClass(classname);
       /*
-                var stagger = i * timeout;
+              var stagger = i * timeout;
 
-                setTimeout( function() {
-                    obj.$bullet.addClass( classname );
-                }, stagger );
-                */
+              setTimeout( function() {
+                  obj.$bullet.addClass( classname );
+              }, stagger );
+              */
     });
   }
 
@@ -220,7 +222,7 @@
   $window.on("rellax load", reloadAll);
 })(jQuery, window, document);
 
-//Init Bully
+// Init Bully
 jQuery(document).ready(function ($) {
   $.each(Onepress_Bully.sections, function (id, args) {
     if (args.enable) {

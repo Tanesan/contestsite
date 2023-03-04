@@ -2,8 +2,9 @@
 /*!
  * FitVids 1.1
  *
- * Copyright 2013, Chris Coyier - http://css-tricks.com + Dave Rupert - http://daverupert.com
- * Credit to Thierry Koblentz - http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
+ * Copyright 2013, Chris Coyier - http://css-tricks.com + Dave Rupert -
+ * http://daverupert.com Credit to Thierry Koblentz -
+ * http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/
  * Released under the WTFPL license - http://sam.zoy.org/wtfpl/
  *
  */
@@ -18,7 +19,8 @@
     };
 
     if (!document.getElementById("fit-vids-style")) {
-      // appendStyles: https://github.com/toddmotto/fluidvids/blob/master/dist/fluidvids.js
+      // appendStyles:
+      // https://github.com/toddmotto/fluidvids/blob/master/dist/fluidvids.js
       var head = document.head || document.getElementsByTagName("head")[0];
       var css =
         ".fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}";
@@ -124,7 +126,12 @@
       this._init();
   }
   var c = "Morphext",
-    d = { animation: "bounceIn", separator: ",", speed: 2e3, complete: a.noop };
+    d = {
+      animation: "bounceIn",
+      separator: ",",
+      speed: 2e3,
+      complete: a.noop,
+    };
   (b.prototype = {
     _init: function () {
       var b = this;
@@ -4227,7 +4234,8 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 
 /**
  * author Christopher Blum
- *    - based on the idea of Remy Sharp, http://remysharp.com/2009/01/26/element-in-view-event-plugin/
+ *    - based on the idea of Remy Sharp,
+ * http://remysharp.com/2009/01/26/element-in-view-event-plugin/
  *    - forked from http://github.com/zuk/jquery.inview/
  */
 (function (factory) {
@@ -4254,15 +4262,15 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
     add: function (data) {
       inviewObjects.push({ data: data, $element: $(this), element: this });
       // Use setInterval in order to also make sure this captures elements within
-      // "overflow:scroll" elements or elements that appeared in the dom tree due to
-      // dom manipulation and reflow
-      // old: $(window).scroll(checkInView);
+      // "overflow:scroll" elements or elements that appeared in the dom tree due
+      // to dom manipulation and reflow old: $(window).scroll(checkInView);
       //
-      // By the way, iOS (iPad, iPhone, ...) seems to not execute, or at least delays
-      // intervals while the user scrolls. Therefore the inview event might fire a bit late there
+      // By the way, iOS (iPad, iPhone, ...) seems to not execute, or at least
+      // delays intervals while the user scrolls. Therefore the inview event might
+      // fire a bit late there
       //
-      // Don't waste cycles with an interval until we get at least one element that
-      // has bound to the inview event.
+      // Don't waste cycles with an interval until we get at least one element
+      // that has bound to the inview event.
       if (!timer && inviewObjects.length) {
         timer = setInterval(checkInView, 250);
       }
@@ -4352,8 +4360,8 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
       // Don't ask me why because I haven't figured out yet:
       // viewportOffset and viewportSize are sometimes suddenly null in Firefox 5.
       // Even though it sounds weird:
-      // It seems that the execution of this function is interferred by the onresize/onscroll event
-      // where viewportOffset and viewportSize are unset
+      // It seems that the execution of this function is interferred by the
+      // onresize/onscroll event where viewportOffset and viewportSize are unset
       if (!viewportOffset || !viewportSize) {
         return;
       }
